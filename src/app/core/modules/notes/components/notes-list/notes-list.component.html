@@ -1,0 +1,22 @@
+<div class="notes">
+  <div *ngFor="let note of notes; let i = index" class="notes__note" (click)="setNote(i)"
+    [ngClass]="{'note-selected': i === currentIndex}">
+    <p [ngClass]="{'note-selected-header': i === currentIndex}" class="notes__header">{{note.header}}</p>
+  </div>
+
+
+  <div class="notes__add">
+    <p (click)="isAdd = true" class="notes__add-plus" *ngIf="!isAdd">+</p>
+    <div *ngIf="isAdd" class="notes__add-inputs">
+      <span>
+        <p>Header</p>
+        <input [(ngModel)]="header" type="text">
+      </span>
+      <span>
+        <p>Text</p>
+        <input [(ngModel)]="text" type="text">
+      </span>
+      <button (click)="addNote()" class="notes__add-button">add</button>
+    </div>
+  </div>
+</div>
