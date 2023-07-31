@@ -56,4 +56,8 @@ export class NotesListComponent implements OnInit, OnDestroy {
     }
   }
 
+  trackByFn(index, item) {
+    return item.id;
+  }
+
 }

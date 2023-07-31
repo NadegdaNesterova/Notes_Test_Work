@@ -1,8 +1,10 @@
+$color-blue: #3a6df2;
+
 .note {
     margin-left: 20px;
 
 
     &__header {
-        color: #3a6df2;
+        color: $color-blue;
     }
 }

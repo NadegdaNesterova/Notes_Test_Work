@@ -1,5 +1,7 @@
+$color-black: #000000;
+
 .header {
-    border: 2px solid #000000;
+    border: 2px solid $color-black;
 
     &__title {
         margin-left: 20px;
